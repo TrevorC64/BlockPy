@@ -3,9 +3,11 @@ public class GeneratePy {
     //it will also easily convert things like java Iterable objects into python arrays, dictionaries, ect.
     public static final String END = "#end";
 
-    public static String print(String message) {
+    public static String printString(String message) {
         return "print(\"" + message + "\")";
     }
+
+    public static String printVal(String val) {return "print(" + val + ")";}
 
     public static String comment(String message){
         return "#" + message;
@@ -16,22 +18,22 @@ public class GeneratePy {
     }
 
     //MATH FUNCTIONS
-    public static String sum(Integer x, Integer y){
+    public static String sum(String x, String y){
         return x + " + " + y;
     }
-    public static String difference(Integer x, Integer y){
+    public static String difference(String x, String y){
         return x + " - " + y;
     }
-    public static String multiply(Integer x, Integer y){
+    public static String multiply(String x, String y){
         return x + " * " + y;
     }
-    public static String divide(Integer x, Integer y){
+    public static String divide(String x, String y){
         return x + " / " + y;
     }
-    public static String modulo(Integer x, Integer y){
+    public static String modulo(String x, String y){
         return x + " % " + y;
     }
-    public static String power(Integer x, Integer y){
+    public static String power(String x, String y){
         return x + " ** " + y;
     }
 
@@ -110,8 +112,9 @@ public class GeneratePy {
     public static String def(String name, String[] args){
         String line = "def " + name + "(";
         for (String arg:args) {
-            line = line.concat(arg); //ADD COMMAS
+            line = line.concat(arg) + ", "; //ADD COMMAS
         }
+        line = line.substring(0, line.length()-2);
         line = line.concat("):");
         return line;
     }

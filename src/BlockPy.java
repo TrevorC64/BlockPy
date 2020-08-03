@@ -83,13 +83,15 @@ public class BlockPy {
         blockPy.createFile("test.py");
 
         blockPy.addLine(GeneratePy.comment("This python program was made with BlockPy!!"));
-        blockPy.addLine(GeneratePy.print("Hello World!"));
-        blockPy.addLine(GeneratePy.def("askNumber", new String[]{"x"}));
-        blockPy.addLine(GeneratePy.input("type a number"));
+        blockPy.addLine(GeneratePy.def("calculateSum", new String[] {"x","y","z"}));
+        blockPy.addLine(GeneratePy.printVal(GeneratePy.sum(GeneratePy.sum("x","y"), "z")));
         blockPy.addLine(GeneratePy.END);
-        blockPy.addLine(GeneratePy.print("Hello World!"));
-        String[] conds = {"True", "False", "True"};
-        blockPy.addLine(GeneratePy.conjunction(conds));
+        blockPy.addLine("");
+        blockPy.addLine(GeneratePy.makeVar("v1", GeneratePy.input("Enter First Number:")));
+        blockPy.addLine(GeneratePy.makeVar("v2", GeneratePy.input("Enter Second Number:")));
+        blockPy.addLine(GeneratePy.makeVar("v3", GeneratePy.input("Enter Third Number:")));
+        blockPy.addLine("calculateSum(v1,v2,v3)");
+        blockPy.addLine(GeneratePy.input(""));
         blockPy.makeChanges();
 
     }
