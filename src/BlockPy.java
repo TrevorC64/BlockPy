@@ -11,6 +11,7 @@ public class BlockPy {
     public BlockPy() {
         //Initializes BlockPy, only used to create the list of lines for now
         this.lines = new ArrayList<>();
+        this.directory = System.getProperty("user.dir");
     }
 
     public void addLine(String line){
@@ -78,7 +79,7 @@ public class BlockPy {
     public static void main(String[] args) {
         BlockPy blockPy = new BlockPy();
 
-        blockPy.setDirectory("C:/Users/Trevor/Desktop/test");
+        //blockPy.setDirectory("C:/Users/trevj/Desktop/test");
         blockPy.createFile("test.py");
 
         blockPy.addLine(GeneratePy.comment("This python program was made with BlockPy!!"));
@@ -87,7 +88,8 @@ public class BlockPy {
         blockPy.addLine(GeneratePy.input("type a number"));
         blockPy.addLine(GeneratePy.END);
         blockPy.addLine(GeneratePy.print("Hello World!"));
-
+        String[] conds = {"True", "False", "True"};
+        blockPy.addLine(GeneratePy.conjunction(conds));
         blockPy.makeChanges();
 
     }
