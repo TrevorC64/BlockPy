@@ -90,8 +90,8 @@ public class BlockPy {
         blockPy.addLine(GeneratePy.makeVar("v1", GeneratePy.input("Enter First Number:")));
         blockPy.addLine(GeneratePy.makeVar("v2", GeneratePy.input("Enter Second Number:")));
         blockPy.addLine(GeneratePy.makeVar("v3", GeneratePy.input("Enter Third Number:")));
-        blockPy.addLine("calculateSum(v1,v2,v3)");
-        blockPy.addLine(GeneratePy.input(""));
+        blockPy.addLine(GeneratePy.call("calculateSum", new String[] {"v1", "v2", "v3"}));
+        blockPy.addLine(GeneratePy.input("end of function"));
         blockPy.makeChanges();
 
     }

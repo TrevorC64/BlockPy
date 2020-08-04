@@ -114,8 +114,18 @@ public class GeneratePy {
         for (String arg:args) {
             line = line.concat(arg) + ", "; //ADD COMMAS
         }
-        line = line.substring(0, line.length()-2);
+        line = line.substring(0, line.length()-2); //REMOVE LAST COMMA
         line = line.concat("):");
+        return line;
+    }
+
+    public static String call(String function, String[] args){
+        String line = function + "(";
+        for (String arg:args) {
+            line = line.concat(arg) + ", "; //ADD COMMAS
+        }
+        line = line.substring(0, line.length()-2); //REMOVE LAST COMMA
+        line = line.concat(")");
         return line;
     }
 }
