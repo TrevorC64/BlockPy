@@ -1,36 +1,90 @@
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
+import javax.swing.event.TreeSelectionEvent;
+import javax.swing.event.TreeSelectionListener;
+import javax.swing.tree.DefaultMutableTreeNode;
 import java.awt.*;
 
 public class BlockPyGUI {
+    private JPanel sidebar;
+    private JPanel panel;
+    private JPanel editArea;
+    private JTree blocks;
 
-    public BlockPyGUI() {
-        JFrame frame = new JFrame("BlockPy");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
+        DefaultMutableTreeNode root = new DefaultMutableTreeNode("Code Blocks");
 
-        JMenuBar menuBar = new JMenuBar();
+        DefaultMutableTreeNode general = new DefaultMutableTreeNode("General Blocks");
+        DefaultMutableTreeNode math = new DefaultMutableTreeNode("Math Blocks");
+        DefaultMutableTreeNode logic = new DefaultMutableTreeNode("Logic Blocks");
+
+        DefaultMutableTreeNode print = new DefaultMutableTreeNode("Print");
+        DefaultMutableTreeNode input = new DefaultMutableTreeNode("Input");
+        DefaultMutableTreeNode comment = new DefaultMutableTreeNode("Comment");
+
+        DefaultMutableTreeNode add = new DefaultMutableTreeNode("Add");
+        DefaultMutableTreeNode subtract = new DefaultMutableTreeNode("Subtract");
+        DefaultMutableTreeNode multiply = new DefaultMutableTreeNode("Multiply");
+        DefaultMutableTreeNode divide = new DefaultMutableTreeNode("Divide");
+
+        DefaultMutableTreeNode conjunction = new DefaultMutableTreeNode("And");
+        DefaultMutableTreeNode disjunction = new DefaultMutableTreeNode("Or");
+        DefaultMutableTreeNode negation = new DefaultMutableTreeNode("Not");
+
+        general.add(print);
+        general.add(input);
+        general.add(comment);
+
+        math.add(add);
+        math.add(subtract);
+        math.add(multiply);
+        math.add(divide);
+
+        logic.add(conjunction);
+        logic.add(disjunction);
+        logic.add(negation);
+
+        root.add(general);
+        root.add(logic);
+        root.add(math);
+
+        this.blocks = new JTree(root);
+
+
+    }
+
+    public BlockPyGUI(){
+        JFrame frame = new JFrame("APP");
+        frame.setContentPane(this.panel);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setSize(1500,700);
+
+        JMenuBar mb = new JMenuBar();
         JMenu m1 = new JMenu("File");
         JMenu m2 = new JMenu("Help");
-        menuBar.add(m1);
-        menuBar.add(m2);
+        JMenu m3 = new JMenu("Save");
+        mb.add(m1);
+        mb.add(m2);
+        mb.add(m3);
+        frame.getContentPane().add(BorderLayout.NORTH, mb);
+        mb.setVisible(true);
 
-        JPanel sidebar = new JPanel();
-        sidebar.setLayout(new BoxLayout(sidebar, BoxLayout.Y_AXIS));
-        JLabel title = new JLabel("CODE BLOCKS");
-        JButton b1 = new JButton("Make Var");
-        JButton b2 = new JButton("IF");
-        sidebar.add(title);
-        sidebar.add(b1);
-        sidebar.add(b2);
-        sidebar.setBackground(Color.decode("#dddddd"));
-        sidebar.setBorder(new EmptyBorder(10,10,10,10));
-
-
-
-        frame.getContentPane().add(BorderLayout.WEST, sidebar);
-        frame.getContentPane().add(BorderLayout.NORTH, menuBar);
         frame.setVisible(true);
 
+        blocks.addTreeSelectionListener(new TreeSelectionListener() {
+            @Override
+            public void valueChanged(TreeSelectionEvent treeSelectionEvent) {
+                try{
+                    Object selection = treeSelectionEvent.getPath().getPathComponent(2).toString();
+
+                    System.out.println(selection);
+                } catch (Exception ignored) {
+                }
+            }
+        });
+    }
+
+    public static void main(String[] args) {
+        BlockPyGUI blockPyGui = new BlockPyGUI();
     }
 }

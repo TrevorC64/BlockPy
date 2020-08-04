@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f9fadf1-ff35-4f03-87bb-65a32dcf8651" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Block.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BlockPyGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BlockPyGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PythonBlockCoder/BlockPy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PythonBlockCoder/BlockPy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BlockPy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BlockPy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,12 +33,21 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.STATE" value="right" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE" value="left" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.BlockPy">
     <configuration name="BlockPy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BlockPy" />
+      <module name="PythonBlockCoder" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BlockPyGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BlockPyGUI" />
       <module name="PythonBlockCoder" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -43,6 +56,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.BlockPy" />
+        <item itemvalue="Application.BlockPyGUI" />
       </list>
     </recent_temporary>
   </component>
@@ -59,7 +73,8 @@
       <workItem from="1596260337023" duration="3907000" />
       <workItem from="1596343900623" duration="1954000" />
       <workItem from="1596473456158" duration="2766000" />
-      <workItem from="1596514797491" duration="5986000" />
+      <workItem from="1596514797491" duration="6470000" />
+      <workItem from="1596553358705" duration="4226000" />
     </task>
     <servers />
   </component>
@@ -67,35 +82,52 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1294" y="298" key="#com.intellij.ide.util.MemberChooser" timestamp="1596517962580">
+    <state x="1294" y="298" key="#com.intellij.ide.util.MemberChooser" timestamp="1596556940172">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1294" y="298" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1596517962579" />
+    <state x="1294" y="298" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1596556940172" />
     <state x="1725" y="401" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1596262228905" />
-    <state x="1619" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1596261759730">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="526" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1596557643986">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="526" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596557643986" />
     <state x="1619" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1596261759730" />
-    <state width="914" height="276" key="GridCell.Tab.0.bottom" timestamp="1596520935851">
+    <state x="574" y="264" key="ConfigureClientPropertiesDialog" timestamp="1596554453947">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596520935851" />
+    <state x="574" y="264" key="ConfigureClientPropertiesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596554453947" />
+    <state width="1877" height="280" key="GridCell.Tab.0.bottom" timestamp="1596557652748">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596557652748" />
     <state width="2514" height="403" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1596264254152" />
-    <state width="914" height="276" key="GridCell.Tab.0.center" timestamp="1596520935851">
+    <state width="1877" height="280" key="GridCell.Tab.0.center" timestamp="1596557652748">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="276" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596520935851" />
+    <state width="1877" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596557652748" />
     <state width="2514" height="403" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1596264254152" />
-    <state width="914" height="276" key="GridCell.Tab.0.left" timestamp="1596520935851">
+    <state width="1877" height="280" key="GridCell.Tab.0.left" timestamp="1596557652748">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="276" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596520935851" />
+    <state width="1877" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596557652748" />
     <state width="2514" height="403" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1596264254152" />
-    <state width="914" height="276" key="GridCell.Tab.0.right" timestamp="1596520935851">
+    <state width="1877" height="280" key="GridCell.Tab.0.right" timestamp="1596557652748">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="276" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596520935851" />
+    <state width="1877" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596557652748" />
     <state width="2514" height="403" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1596264254152" />
+    <state x="620" y="237" key="GuiDesigner.FormSource.Dialog" timestamp="1596556310363">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="620" y="237" key="GuiDesigner.FormSource.Dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596556310363" />
+    <state x="839" y="317" key="UIDesigner.ListEditorDialog" timestamp="1596554717781">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="839" y="317" key="UIDesigner.ListEditorDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596554717781" />
+    <state x="732" y="413" key="com.intellij.uiDesigner.propertyInspector.editors.string.StringEditorDialog" timestamp="1596556452491">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="732" y="413" key="com.intellij.uiDesigner.propertyInspector.editors.string.StringEditorDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596556452491" />
     <state x="1096" y="242" key="run.anything.popup" timestamp="1596515765167">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -96,7 +96,7 @@ public class BlockPy {
 
     public static void main(String[] args) {
         BlockPy blockPy = new BlockPy();
-        BlockPyGUI gui = new BlockPyGUI();
+        BlockPyGUI blockPyGui = new BlockPyGUI();
 
         //blockPy.setDirectory("C:/Users/trevj/Desktop/test");
         blockPy.createFile("test.py");
