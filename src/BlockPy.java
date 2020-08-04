@@ -9,7 +9,7 @@ public class BlockPy {
     public ArrayList<String> lines;
     //TODO Move FileWriter to a instance vairiable that way each time you make a change you dont need to reinitialize the variable
 
-    //TODO When implementing the Block Obj make them stored in a linked list to organize how the lines will be generated
+    //TODO When implementing the Blocks.Block Obj make them stored in a linked list to organize how the lines will be generated
     public BlockPy() {
         //Initializes BlockPy, only used to create the list of lines for now
         this.lines = new ArrayList<>();

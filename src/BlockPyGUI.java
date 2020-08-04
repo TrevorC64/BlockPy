@@ -1,3 +1,5 @@
+import Blocks.*;
+
 import javax.swing.*;
 import javax.swing.event.TreeSelectionEvent;
 import javax.swing.event.TreeSelectionListener;
@@ -7,7 +9,6 @@ import java.awt.*;
 public class BlockPyGUI {
     private JPanel sidebar;
     private JPanel panel;
-    private JPanel editArea;
     private JTree blocks;
 
     private void createUIComponents() {
@@ -28,7 +29,7 @@ public class BlockPyGUI {
         DefaultMutableTreeNode divide = new DefaultMutableTreeNode("Divide");
 
         DefaultMutableTreeNode conjunction = new DefaultMutableTreeNode("And");
-        DefaultMutableTreeNode disjunction = new DefaultMutableTreeNode("Or");
+        DefaultMutableTreeNode disjunction = new DefaultMutableTreeNode("OrBlock");
         DefaultMutableTreeNode negation = new DefaultMutableTreeNode("Not");
 
         general.add(print);
@@ -59,6 +60,10 @@ public class BlockPyGUI {
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setSize(1500,700);
 
+        BlockPyDriver driver = new BlockPyDriver();
+        driver.setBackground(Color.decode("#F2E8B9"));
+        frame.getContentPane().add(driver);
+
         JMenuBar mb = new JMenuBar();
         JMenu m1 = new JMenu("File");
         JMenu m2 = new JMenu("Help");
@@ -75,9 +80,10 @@ public class BlockPyGUI {
             @Override
             public void valueChanged(TreeSelectionEvent treeSelectionEvent) {
                 try{
-                    Object selection = treeSelectionEvent.getPath().getPathComponent(2).toString();
-
+                    String selection = treeSelectionEvent.getPath().getPathComponent(2).toString();
+                    driver.generateBlock(selection);
                     System.out.println(selection);
+                    System.out.println(driver.blocks.toString());
                 } catch (Exception ignored) {
                 }
             }
