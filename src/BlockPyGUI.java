@@ -1,4 +1,5 @@
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
 public class BlockPyGUI {
@@ -22,7 +23,10 @@ public class BlockPyGUI {
         sidebar.add(title);
         sidebar.add(b1);
         sidebar.add(b2);
-        sidebar.setBackground(Color.red);
+        sidebar.setBackground(Color.decode("#dddddd"));
+        sidebar.setBorder(new EmptyBorder(10,10,10,10));
+
+
 
         frame.getContentPane().add(BorderLayout.WEST, sidebar);
         frame.getContentPane().add(BorderLayout.NORTH, menuBar);
