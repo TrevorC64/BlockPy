@@ -3,6 +3,7 @@ public class GeneratePy {
     //it will also easily convert things like java Iterable objects into python arrays, dictionaries, ect.
     public static final String END = "#end";
 
+    //GENERAL FUNCTIONS
     public static String printString(String message) {
         return "print(\"" + message + "\")";
     }
@@ -15,6 +16,14 @@ public class GeneratePy {
 
     public static String input(String message){
         return "input(\"" + message + "\")";
+    }
+
+    public static String range(String[] nums){
+        String line = "range(";
+        for (String num:nums) {
+            line += num + ", ";
+        }
+        return line.substring(0, line.length()-2) + ")";
     }
 
     //MATH FUNCTIONS
@@ -53,7 +62,7 @@ public class GeneratePy {
         return line.substring(0, line.length()-5);
     }
     public static String negation(String expression1){
-        return "!" + expression1;
+        return "not (" + expression1 + ")";
     }
 
     //COMPARATOR FUNCTIONS
@@ -104,9 +113,20 @@ public class GeneratePy {
         return "if " + condition + ":";
     }
 
+    //TODO ELSE IF
+    //TODO ELSE
 
+    //LOOP FUNCTIONS
 
+    //TODO FOR LOOP
+    public static String forLoop(String var, String range){
+        return "for " + var + " in " + range + ":";
+    }
+    //TODO WHILE LOOP
 
+    public static String whileLoop(String condition){
+        return "while(" + condition + "):";
+    }
 
 
     public static String def(String name, String[] args){
