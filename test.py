@@ -11,7 +11,7 @@ calculateSum(v1, v2, v3)
 
 for x in range(10):
 
-    if not(x % 2):
+    if not (x % 2):
         print(x)
         #end
 
