@@ -50,8 +50,6 @@ public class BlockPyGUI {
         root.add(math);
 
         this.blocks = new JTree(root);
-
-
     }
 
     public BlockPyGUI(){
@@ -88,6 +86,9 @@ public class BlockPyGUI {
                 }
             }
         });
+
+        DragDetector dd = new DragDetector(driver.blocks);
+        this.panel.addMouseMotionListener(dd);
     }
 
     public static void main(String[] args) {
