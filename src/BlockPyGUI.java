@@ -5,6 +5,7 @@ import javax.swing.event.TreeSelectionEvent;
 import javax.swing.event.TreeSelectionListener;
 import javax.swing.tree.DefaultMutableTreeNode;
 import java.awt.*;
+import java.awt.event.MouseListener;
 
 public class BlockPyGUI {
     private JPanel sidebar;
